@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Ethics Quiz</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container" id="welcome">
+  <h1>Welcome to the AI Ethics Quiz!</h1>
+  <p>This quiz challenges your knowledge of AI Ethics, *Detroit: Become Human*, and topics related to Dublin and TU Dublin.</p>
+  <p><strong>Rules:</strong></p>
+  <ul>
+    <li>Select a difficulty level (Easy, Medium, Hard):</li>
+    <ul>
+      <li><strong>Easy:</strong> 45 seconds per question, unlimited hints, 10 points per correct answer (+5 for streaks).</li>
+      <li><strong>Medium:</strong> 30 seconds per question, up to 3 hints, 20 points per correct answer (+10 for streaks).</li>
+      <li><strong>Hard:</strong> 20 seconds per question, no hints allowed, 30 points per correct answer (+15 for streaks).</li>
+    </ul>
+    <li>Answer 20 randomized questions with shuffled answers.</li>
+    <li>Earn streak bonuses for consecutive correct answers.</li>
+    <li>Get rewards for answering quickly!</li>
+    <li>Each hint provides a helpful tip for answering questions, but use them wisely (if available).</li>
+  </ul>
+  <button class="button" onclick="setDifficulty('easy')">Easy</button>
+  <button class="button" onclick="setDifficulty('medium')">Medium</button>
+  <button class="button" onclick="setDifficulty('hard')">Hard</button>
+</div>
+
+<div class="container hidden" id="game">
+  <div class="timer" id="timer">Time Left: 30s</div>
+  <h2 id="question">Loading question...</h2>
+  <div id="choices"></div>
+  <p id="hint" style="display: none;"></p>
+  <button class="button" id="hintButton" onclick="showHint()">Use Hint</button>
+</div>
+
+<div class="container hidden" id="result">
+  <h2>Game Over!</h2>
+  <p id="message">Congratulations on completing the quiz!</p>
+  <p id="score">Final Score: 0</p>
+  <p id="hintsUsed">Hints Used: 0</p>
+  <p id="streakBonus">Streak Bonus Earned: 0</p>
+  <button class="button" onclick="restartGame()">Play Again</button>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>

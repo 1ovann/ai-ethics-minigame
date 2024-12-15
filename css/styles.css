@@ -1,0 +1,133 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container styling for all sections */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Button styling */
+.button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Hidden elements (game and results pages initially hidden) */
+.hidden {
+    display: none;
+}
+
+/* Timer styling */
+.timer {
+    color: #ffeb3b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Question styling */
+#question {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Choices (answer buttons) styling */
+#choices button {
+    display: block;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#choices button:hover {
+    background-color: #2d3748;
+    transform: scale(1.05);
+}
+
+/* Hint text styling */
+#hint {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fbbf24;
+    display: none;
+}
+
+/* Final results styling */
+.final {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Correct answer animation */
+.correct {
+    background-color: #22c55e !important;
+    animation: correctGlow 1s forwards;
+}
+
+/* Incorrect answer animation */
+.incorrect {
+    background-color: #ef4444 !important;
+    animation: shake 0.5s forwards;
+}
+
+/* Keyframe for correct answer glow */
+@keyframes correctGlow {
+    0% {
+        box-shadow: 0 0 5px #22c55e;
+    }
+    100% {
+        box-shadow: 0 0 20px #22c55e;
+    }
+}
+
+/* Keyframe for incorrect answer shake */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
